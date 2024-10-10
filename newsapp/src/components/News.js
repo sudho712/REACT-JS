@@ -21,7 +21,7 @@ export class News extends Component {
    async componentDidMount()
   {
     console.log("cdm")
-    let url="";
+    let url=""; //add your news api to fetch news
     let data= await fetch(url);
     let parseData = await data.json()    
     console.log(parseData);
