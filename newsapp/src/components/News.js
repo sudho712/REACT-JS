@@ -38,7 +38,18 @@ export class News extends Component {
     };
   }
 
+   async componentDidMount()
+  {
+    console.log("cdm")
+    let url=""; // write yor api key fetch news  
+    let data= await fetch(url);
+    let parseData = await data.json()    
+    console.log(parseData);
+    this.setState({articles: parseData.articles})
+
+  }
   render() {
+    console.log("rander")
     return (
       <div className="container my-3">
         <h2>News Top Headlines</h2>
