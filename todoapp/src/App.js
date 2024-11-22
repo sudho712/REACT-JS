@@ -1,8 +1,15 @@
-import React from 'react'
-function App(){
+import React from 'react';
+import "./App.css";
+import ToDoInput from './components/toDoInput'; // Use the correct import name
+
+function App() {
   return (
-    <div>App se</div>
-  )
+    <div className="main-container">
+      <div className="center-container">
+        <ToDoInput /> {/* Use the component name starting with an uppercase letter */}
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
