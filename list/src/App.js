@@ -1,23 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
 
-function Car(props) {
-  return <li>I am a {props.brand}</li>;
-}
+function App() {
+  // Sample list of items
+  const items = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
 
-function Garage() {
-  const cars = ['Ford', 'BMW', 'Audi'];
   return (
-    <>
-      <h1>Who lives in my garage?</h1>
+    <div>
+      <h2>Fruits List</h2>
       <ul>
-        {cars.map((car) => (
-          <Car brand={car} key={car} />
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Garage />);
+export default App;
